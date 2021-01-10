@@ -1,0 +1,60 @@
+USE [elearneweb]
+GO
+/****** Object:  Table [dbo].[courses]    Script Date: 27-Dec-20 4:39:24 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[courses](
+	[id] [int] NOT NULL,
+	[name] [nvarchar](50) NULL,
+	[description] [nvarchar](50) NULL,
+	[createdby] [int] NULL,
+	[assignedteacher] [int] NULL,
+ CONSTRAINT [PK_courses] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[coursestudents]    Script Date: 27-Dec-20 4:39:24 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[coursestudents](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[studentuserid] [int] NULL,
+	[courseid] [int] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[user]    Script Date: 27-Dec-20 4:39:24 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[user](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[fname] [nvarchar](50) NULL,
+	[lname] [nvarchar](50) NULL,
+	[email] [nvarchar](50) NULL,
+	[identificationno] [nvarchar](50) NULL,
+	[passwordhash] [varbinary](max) NULL,
+	[passwordsalt] [varbinary](max) NULL,
+	[role] [int] NULL,
+ CONSTRAINT [PK_user] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+USE [elearneweb]
+GO
+SET IDENTITY_INSERT [dbo].[user] ON 
+GO
+INSERT [dbo].[user] ([id], [fname], [lname], [email], [identificationno], [passwordhash], [passwordsalt], [role]) VALUES (1, N'admin', N'user', N'admin@elearnweb.com', N'admin1', 0x56F52763295683EBE4CB5F26AE848ADF1D327DA887929D2006B87532CA9B892AB92436F733CAAE5C780A3C2815A3EC7A3415AA957B1C0132FC33697C636E5F2C, 0x4168E4923C8CE3EBBD4E5836C190995BCE1F5E0F0732C9FC647F25D35D4132918D868F99FBE123819526E4F80812AE74CAC89AA716983C4285FE33B2E735059CD189982DE4559E619F5D010EA4FD608752D0C9226CBF0C574A9122749B6CF74337FAF14CBB28493FBDD92176403F418D07312A937FC8F90D32555F1E40A46F6C, 1)
+GO
+SET IDENTITY_INSERT [dbo].[user] OFF
+GO

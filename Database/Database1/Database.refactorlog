@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="e34e4669-d927-4bb9-bb69-0f2b6b2b1170" ChangeDateTime="01/09/2021 17:02:07">
+    <Property Name="ElementName" Value="[dbo].[courselessons].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[courselessons]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b5bb844d-e4b7-4a73-a580-28c9d85c736a" ChangeDateTime="01/09/2021 17:03:21">
+    <Property Name="ElementName" Value="[dbo].[courselessonattachments].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[courselessonattachments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f3bd8683-4d18-42b5-8e94-f4df52435c2c" ChangeDateTime="01/09/2021 17:08:26">
+    <Property Name="ElementName" Value="[dbo].[courselessonattachments].[courseid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[courselessonattachments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="lessonid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b594fb83-2f78-4b27-a242-ec256680e9cd" ChangeDateTime="01/10/2021 09:14:59">
+    <Property Name="ElementName" Value="[dbo].[courselessons].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[courselessons]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4a36827b-a813-417e-884f-665650ac1526" ChangeDateTime="01/10/2021 09:18:41">
+    <Property Name="ElementName" Value="[dbo].[lessonattachments].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[lessonattachments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+</Operations>

@@ -1,0 +1,40 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.table-header{
+    display: inline-block;
+}
+
+.add-btn{
+    float: right;
+}
+
+.lesson-paragraph {
+    white-space: pre-wrap;
+    margin: 50px 0;
+}
+
+.lesson-exercise {
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+}
+
+.lesson-attachment {
+    margin-bottom: 20px;
+}
+
+.lesson-content {
+    margin-bottom: 100px;
+}
